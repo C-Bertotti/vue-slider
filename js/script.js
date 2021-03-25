@@ -1,15 +1,23 @@
-var app = new Vue( 
-    {
-        el: '#root',
-        data: {
-            img: {
-                'https://get.wallhere.com/photo/16-1826x1217-px-ocean-otter-sea-1653537.jpg',
-                'https://get.wallhere.com/photo/goat-muzzle-funny-1189300.jpg',
-                'https://get.wallhere.com/photo/nature-grass-wildlife-Canon-whiskers-hay-exploring-grassland-explore-fields-racoon-canon6d-nocturnal-fauna-mammal-babies-prairie-snout-grass-family-ecoregion-raccoon-procyonidae-procyon-viverridae-farmanimals-wildanimals-coon-babyanimals-cuteanimals-racoons-babyracoons-babyracoon-farmerscrop-terrestrial-animal-874362.jpg',
-                'https://get.wallhere.com/photo/2560x1600-px-animals-red-panda-sloths-1090870.jpg'
+var app = new Vue ({
+    el: '#root',
+    data: {
+        img: [
+            'https://i.ytimg.com/vi/KfMZb31kk74/maxresdefault.jpg',
+            'https://i.pinimg.com/originals/5d/05/65/5d056564b31ecd54ff21b5d62019e14b.jpg',
+            'https://i.pinimg.com/originals/11/9e/41/119e41e7f25a3189a59a3007dadfea4f.jpg',
+            'http://wallpapers4screen.com/Uploads/24-1-2016/15367/thumb2-red-panda-log-sleep-firefox-language.jpg'
+        ],
+        imgIndex: 0,
+
+    },
+    methods: {
+        nextImage: function() {
+            this.imgIndex++
+
+            if ( this.imgIndex == this.img.length ) {
+                this.imgIndex = 0;
             }
-        }
+        },
+
     }
-
-
-)
+});
