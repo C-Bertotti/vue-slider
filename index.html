@@ -20,7 +20,7 @@
         <div class="carousel__wrapper">
             <div class="carousel">
                 <div class="carousel__prev">
-                    <i class="fas fa-chevron-left"></i>
+                    <i @click="prevImage" class="fas fa-chevron-left"></i>
                 </div>
                 <div class="carousel__imgs">
                     <img :src="img[imgIndex]" alt="animals">
