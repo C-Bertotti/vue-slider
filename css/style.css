@@ -26,9 +26,20 @@
     object-fit: cover;
 }
 
-.carousel__imgs p {
+.carousel__bullets {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.carousel__bullets i {
+    margin: 0 5px;
+    font-size: 8px;
+}
+
+i.active {
+    font-size: 12px;
 }

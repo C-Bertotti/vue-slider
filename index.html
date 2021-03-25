@@ -24,7 +24,9 @@
                 </div>
                 <div class="carousel__imgs">
                     <img :src="img[imgIndex]" alt="animals">
-                    <p>ciaoneone</p>
+                    <div class="carousel__bullets">
+                        <i v-for="(bullet, bulletIndex) in img" class="fas fa-circle" :class="imgIndex == bulletIndex ? 'active' : '' "></i>
+                    </div>
                 </div>
                 <div class="carousel__next">
                     <i @click="nextImage" class="fas fa-chevron-right"></i>
